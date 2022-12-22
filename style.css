@@ -7,6 +7,10 @@ body {
   background: #17181a;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  position: relative;
+}
+main {
+  position: absolute;
 }
 
 #logo {
@@ -190,28 +194,28 @@ textarea:focus {
   transform-origin: 75% 75%;
   z-index: 1;
 }
-.cursor.nav-active{
+.cursor.nav-active {
   background: rgb(86, 124, 228);
   transform: scale(3);
   border: none;
 }
-.explore-active{
+.explore-active {
   background: white;
   border: none;
   transform: scale(3);
 }
-.cursor-text{
+.cursor-text {
   position: absolute;
   top: 50%;
   left: 50%;
   font-size: 0.5rem;
   transform: translate(-50%, -85%);
 }
-.title{
+.title {
   position: relative;
   overflow: hidden;
 }
-.title-swipe{
+.title-swipe {
   width: 100%;
   height: 100%;
   top: 0%;
@@ -220,20 +224,113 @@ textarea:focus {
   transform: translateY(100%);
   mix-blend-mode: darken;
 }
-.t-swipe1{
+.t-swipe1 {
   background: rgb(86, 124, 228);
 }
-.t-swipe2{
+.t-swipe2 {
   background: rgb(167, 110, 231);
 }
-.t-swipe3{
+.t-swipe3 {
   background: rgb(255, 139, 93);
 }
 
-.scrollmagic-pin-spacer{
+.scrollmagic-pin-spacer {
   position: static !important;
 }
 
-body.hide{
+body.hide {
   overflow: hidden;
+}
+
+/* fashion page */
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 90vh;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  color: white;
+  flex-wrap: wrap;
+  position: relative;
+}
+.fashion3 {
+  margin-bottom: 5rem;
+}
+.fashion-img {
+  height: 70vh;
+  flex-basis: 30rem;
+}
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+.fashion-text p {
+  font-size: 2rem;
+  padding: 2rem 2rem 0rem 0rem;
+  margin-bottom: 5rem;
+}
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fashion-text h1 {
+  font-size: 6rem;
+  padding: 5rem 0rem;
+}
+.fashion1 h1 {
+  color: rgb(255, 139, 93);
+}
+.fashion2 h1 {
+  color: rgb(167, 110, 231);
+}
+.fashion3 h1 {
+  color: rgb(86, 124, 228);
+}
+
+.fashion-nr {
+  font-size: 15rem;
+  position: absolute;
+  left: 40%;
+  top: 62%;
+  color: white;
+  opacity: 0.5;
+}
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.swipe1 {
+  background: rgb(86, 124, 228);
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(255, 139, 93);
+  z-index: 4;
+}
+.swipe3 {
+  z-index: 3;
+  background: rgb(167, 110, 231);
+}
+
+@media screen and (max-width: 1024) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
