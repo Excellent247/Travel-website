@@ -252,7 +252,7 @@ body.hide {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  /* margin-top: 2rem; */
   color: white;
   flex-wrap: wrap;
   position: relative;
@@ -323,14 +323,96 @@ body.hide {
   background: rgb(167, 110, 231);
 }
 
-@media screen and (max-width: 1024) {
-  main {
+/* media queries for small screens and laptops*/
+@media screen and (max-width: 1024px) {
+  body {
     width: 100%;
     margin: 0;
   }
   .slide {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
     text-align: center;
+    min-height: 50vh;
+    margin-top: 2rem;
+  }
+  .hero-desc {
+    padding-left: 0rem;
+  }
+  .hero-desc h2 {
+    font-size: 3rem;
+  }
+  .hero-desc-hike {
+    order: 2;
+    padding-right: 0rem;
+  }
+  .explore {
+    align-self: center;
+    width: 60%;
+  }
+  .cursor {
+    width: 2rem;
+    height: 2rem;
+  }
+  .nav-bar {
+    display: block;
+  }
+  .nav-links {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    padding: 0rem 2rem;
+  }
+  .nav-links h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+  }
+  .contact {
+    padding: 0rem 2rem;
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  .contact form input,
+  .contact form textarea {
+    font-size: 1rem;
+    padding: 1rem 0rem;
+  }
+  .contact #button {
+    width: 6rem;
+  }
+  .detail-slide{
+    display: block;
+    min-height: 50vh;
+  }
+  .fashion-text h1{
+    font-size: 2rem;
+    padding: 1rem 0rem;
+  }
+  .fashion-text p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .fashion-img{
+    height: 50vh;
+  }
+  .fashion-img img{
+    object-position: top;
+  }
+}
+/* media queries for iPads, Tablet*/
+@media screen and (max-width: 768px) {
+  .hero-desc h2 {
+    font-size: 2rem;
+  }
+  .hero-desc p {
+    font-size: 1rem;
+    padding: 1rem 0rem;
+  }
+}
+/* media queries for Mobile devices*/
+@media screen and (max-width: 480px) {
+  body {
+    opacity: 0;
   }
 }
